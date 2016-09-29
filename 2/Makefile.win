@@ -1,15 +1,15 @@
-# Project: SFML 1
+# Project: SFML 2
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o src/Background.o
-LINKOBJ  = main.o src/Background.o
+OBJ      = main.o
+LINKOBJ  = main.o
 LIBS     = -L"C:/Users/David/Desktop/Dev-Cpp/MinGW64/lib32" -L"C:/Users/David/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -mwindows -lsfml-graphics -lsfml-window -lsfml-system -m32
 INCS     = -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/David/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "SMFL 1.exe"
+BIN      = "SFML 2.exe"
 CXXFLAGS = $(CXXINCS) -m32
 CFLAGS   = $(INCS) -m32
 RM       = rm.exe -f
@@ -26,6 +26,3 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-src/Background.o: src/Background.cpp
-	$(CPP) -c src/Background.cpp -o src/Background.o $(CXXFLAGS)

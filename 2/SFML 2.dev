@@ -1,6 +1,6 @@
 [Project]
-FileName=SMFL 1.dev
-Name=SFML 1
+FileName=SFML 2.dev
+Name=SFML 2
 Type=0
 Ver=2
 ObjFiles=
@@ -19,17 +19,17 @@ ObjectOutput=
 LogOutput=
 LogOutputEnabled=0
 OverrideOutput=0
-OverrideOutputName=SFML 1.exe
+OverrideOutputName=
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders=cpp,hpp
+Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
-CompilerSet=0
+CompilerSet=3
 CompilerSettings=0000000100000000000000000
-UnitCount=5
+UnitCount=1
 
 [VersionInfo]
 Major=1
@@ -54,46 +54,6 @@ SyncProduct=1
 FileName=main.cpp
 CompileCpp=1
 Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
-FileName=src\Background.hpp
-CompileCpp=1
-Folder=hpp
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
-FileName=src\Background.cpp
-CompileCpp=1
-Folder=cpp
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit4]
-FileName=src\Creature.hpp
-CompileCpp=1
-Folder=hpp
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit5]
-FileName=src\ControlledCreature.hpp
-CompileCpp=1
-Folder=hpp
 Compile=1
 Link=1
 Priority=1000

@@ -19,8 +19,8 @@ class ControlledCreature: public Creature {
 		void setDir(int tDir){
 			dir=tDir; // you don't say!
 		}
-		void move(){	// only moves one step by now
-
+		void move(/* float dTime*/){	// only moves one step by now
+			// lerp(vec2 orig, vec2 dest,speed,dTime);
 			sf::Vector2f pos=sp.getPosition();
 			switch(dir){
 				case 0: pos.y-=32; break;
