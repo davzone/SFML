@@ -19,11 +19,10 @@ class ControlledCreature: public Creature {
 		void setDir(int tDir){
 			dir=tDir; // you don't say!
 		}
-		void move(/* float dTime*/){	// only moves one step by now
-			// lerp(vec2 orig, vec2 dest,speed,dTime);
+		void move(float dTime){	// only moves one step by now
 			sf::Vector2f pos=sp.getPosition();
 			switch(dir){
-				case 0: pos.y-=32; break;
+				case 0: pos.y-=32;/*pos.y-= velocity*dTime;*/ break;
 				case 1: pos.y+=32; break;
 				case 2: pos.x-=32; break;
 				case 3: pos.x+=32; break;
@@ -32,8 +31,8 @@ class ControlledCreature: public Creature {
 			dir= -1;
 			sp.setPosition(pos) ;
 		}
-		void update(){
-			move();
+		void update( float dTime){
+			move(dTime);
 		}	
 		void atack(){
 			// pum!! pum!! pum!!

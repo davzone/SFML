@@ -3,13 +3,13 @@
 void Background::init(){
 	srand(time(NULL));
 	
-	tx.loadFromFile("gfx/tiles.png");
+	tx.loadFromFile("../gfx/tiles.png");
 //	tx.create(32,32);
 	sp.setTexture(tx);
 	
 	for(int y= 0; y<15; y++){
 		for(int x= 0; x<20; x++){
-			tiles[y][x] = rand()%6;
+			tiles[y][x] = rand()%2;
 		}	
 	}
 }

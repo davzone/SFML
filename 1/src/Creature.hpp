@@ -13,7 +13,7 @@ class Creature{
 	sf::Texture tex;
 	int weight;
 	int steps, maxSteps;
-	
+	int movementType; // 0 = random, 1 go to destiny, 3 go to target
 	sf::Vector2f destiny;
 	Creature* target;
 	sf::Sprite sp;
@@ -24,12 +24,16 @@ class Creature{
 			stamina = 100;
 			steps=weight=5;
 			initStats();
+			destiny.x=0;
+			destiny.y=0;
+			movementType=0;
 		}
 		virtual void initStats(){
 			// load base race stats form  file
 		}
-		virtual void move(){	// defined by str and current weight
-			stamina-= (steps*2)-(str-(weight/1.7));
+		virtual void move(float dTime){	// defined by str and current weight
+		//	stamina-= (steps*2)-(str-(weight/1.7));
+			
 		}
 		
 		virtual void atack(){
@@ -49,7 +53,8 @@ class Creature{
 		}
 		
 		virtual void setDestiny(sf::Vector2f dest){
-			destiny = dest;
+			destiny.x = dest.x;
+			destiny.y = dest.y;
 		}
 		
 		virtual void setDestiny(Creature* cDest){
@@ -59,12 +64,18 @@ class Creature{
 		virtual void setTarget(Creature* dest){ // select weakest of nearest foes, to do:  enemy vector
 			
 		}
-		virtual void update(){
-			move();
+		virtual void update(float dTime){
+			move(dTime);
 		}
 		virtual void draw(sf::RenderWindow &rWindow){
 			// select creature image
 			rWindow.draw(sp);
+		}
+		virtual sf::Vector2f getPosition(){
+			sp.getPosition();
+		}
+		virtual void setPosition(sf::Vector2f position){
+			sp.setPosition(position);
 		}
 };
 
